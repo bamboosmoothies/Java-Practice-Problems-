@@ -4,6 +4,8 @@
  */
 package practice.problems;
 
+import java.util.Scanner;
+
 /**
  *
  * @author School
@@ -64,14 +66,99 @@ public class practice2 {
             System.out.print("@");
         }
         
-        //BREAK & TODO: do problem 2
-        System.out.println("\n\n");
+        //BREAK 
+        System.out.println("");
+        System.out.println("\nProblem 2\n");
         // Problem #2
         
-        for (int i = 0; i < 10; i++) {
-            
+        for (int a = 1, b = 10, c = 11, d = 20, e = 21, f = 30; a <= 10; a++, b--, c++, d--, e++, f--) {
+            System.out.println(a + " " + b + " " + c + " " + d + " " + e + " " + f);
         }
+
+        //BREAK 
+        System.out.println("");
+        System.out.println("\nProblem 3\n");
+        // Problem #3
         
+        //boxLetters();
+             
+        //BREAK 
+        System.out.println("\nProblem 4\n");
+        // Problem #4
+        
+        //sort10Int();
+        
+        //BREAK 
+        System.out.println("\nProblem 5\n");
+        // Problem #5
+        
+        exponentCalc();
+        
+    }
+    
+    //Methods
+    
+    //Problem #3 
+    public static void boxLetters() {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter rows:");
+        int heightIN = scan.nextInt();
+        System.out.println("Enter columns:");
+        int widthIN = scan.nextInt();
+        
+        for (int i = 0; i < heightIN; i++) {
+            for (int j = 0; j < widthIN; j++) {
+            System.out.print("B ");
+            }
+            System.out.println("");
+        }
+    }
+    
+    //Problem #4
+    public static void sort10Int() {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter 10 Integers:");
+        int small, large;
+        int p = 2;
+        
+        System.out.println("Num 1:");
+        int a = scan.nextInt();
+        large = a;
+        small = a;
+        
+        while(p <= 10) {
+            System.out.println("Num " + p + ":");
+            int b = scan.nextInt();
+            
+            if (b < small) {
+                small = b;
+            }
+            if (b > large) {
+                large = b;
+            }
+            
+            p++;
+        }
+        System.out.println("Largest int: " + large + ", Smallest int: " + small);
+    }
+    
+    //Problem #5
+    public static void exponentCalc() {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Enter base/integer:");
+        int b = scan.nextInt();
+        System.out.println("Enter exponenet/power:");
+        int e = scan.nextInt();
+        int result = 1, i = 1;
+        do {
+            result = result * b;
+            i++;
+        }
+        while(i == e);
+        System.out.println(result);
         
     }
     
