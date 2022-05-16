@@ -92,7 +92,29 @@ public class practice2 {
         System.out.println("\nProblem 5\n");
         // Problem #5
         
-        exponentCalc();
+        //exponentCalc();
+        
+        //BREAK 
+        System.out.println("\nProblem 6\n");
+        // Problem #6
+        int trackOdd = 1, trackEven = 0;
+               
+        for (int i = 1; i <= 20; i+=2) {
+            trackOdd = trackOdd * i;
+        }
+        
+        for (int i = 0; i <= 100; i+=2) {
+            trackEven = trackEven + i; 
+        }
+        
+        System.out.println("Odd: " + trackOdd + "\nEven: " + trackEven);
+
+        
+        
+        
+        
+        
+        
         
     }
     
